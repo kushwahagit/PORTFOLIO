@@ -3,6 +3,9 @@
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Roboto Condensed", sans-serif;
     width: 100%;
@@ -70,9 +73,15 @@ body header nav ul li a{
     font-size: 1.7rem;
     font-weight: 500;
     padding: 10px 13px;
+    transition: 0.2ms;
+    transition-timing-function: ease-in-out;
 }
 
-
+body header nav ul li:hover a{
+    color:#4d469d;
+    border-bottom:3px solid #4d469d;
+    font-weight: 600;
+}
 
 body .homepage{
     width: auto;
@@ -106,11 +115,12 @@ body .homepage .left .leftmain .socials li{
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     border-radius:38% 62% 36% 64% / 75% 39% 61% 25%;
+    box-shadow: 0px 0px 8px black;
     transition: 0.5s;
 }
 
 body .homepage .left .leftmain .socials li:hover{
-    border-radius: 72% 28% 73% 27% / 36% 67% 33% 64% ;
+    border-radius: 72% 28% 64% 36% / 32% 71% 29% 68%  ;
     background-color: blueviolet;
 }
 
@@ -174,7 +184,7 @@ body .homepage .left .leftmain h4{
 	}
 }
 body .homepage .left .leftmain h4 span{
-    color:blueviolet;
+    color:#4d469d;
     animation: flikker 2s ease 0s 1 normal forwards;
     animation-iteration-count: infinite;
 }
@@ -182,7 +192,7 @@ body .homepage .left .leftmain h6{
     animation: bounceleft 3s ease 0s 1 normal forwards;
 }
 body .homepage .left .leftmain h6 span{
-    color:blueviolet;
+    color:#4d469d;
 }
 
 @keyframes flikker {
@@ -662,7 +672,7 @@ body .about{
     margin-left: 10%;
     margin-top: 80px;
     margin-bottom: 80px;
-    background-color: #0000002f;
+    background-color: #00000018;
     border-radius: 40px;
     backdrop-filter: blur(5px);
     padding: 40px;
@@ -673,6 +683,7 @@ body .about{
 body .about h1{
     font-size: 5rem;
     margin-bottom: 30px;
+    color: #26234e;
     text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.781);
 }
 
@@ -682,8 +693,258 @@ body .about p{
     /* text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.781); */
 }
 
+body .about p button{
+    padding: 10px 30px;
+    border-radius: 12% 88% 17% 83% / 95% 30% 70% 5% ;
+    border: 0px solid transparent;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    margin: 0px 10px;
+    width:auto;
+    box-shadow: 0px 0px 8px black;
+    transition: 0.5s;
+}
+
+body .about p button a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 0.781);
+}
+body .about p button:hover{
+    border-radius: 82% 18% 82% 18% / 23% 83% 17% 77%  ;
+}
 
 body .skills{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin-left: 8%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+body .skills .skillsmain{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+body .skills .heading{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
+
+body .skills .heading h1{
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #000000;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.781);
+}
+body .skills .heading h1 span{
+    font-family: "Dancing Script", cursive;
+    color: #26234e;
+}
+
+
+body .skills .card{
+    background-color: #00000018;
+    width: 40%;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.476);
+    box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.545);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+    @-webkit-keyframes flash {
+    0%, 50%, 100% {
+    opacity: 1;
+    }
+    
+    25%, 75% {
+    opacity: 0;
+    }
+    }
+
+body .skills .card img{
+    height: 100px;
+}
+
+body .skills .card .bar{
+    background-color: #00000020;
+    height: 20%;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px inset black;
+    margin-top: 5px;
+}
+
+body .skills .card .bar .progress1{
+    height: 100%;
+    width: 90%;
+    background-color: #26234e;
+    border-radius: 30px;
+    color: #26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+
+body .skills .card .bar .progress2{
+    height: 100%;
+    width: 60%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+
+body .skills .card .bar .progress3{
+    height: 100%;
+    width: 95%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+body .skills .card .bar .progress4{
+    height: 100%;
+    width: 83%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+body .skills .card .bar .progress5{
+    height: 100%;
+    width: 77%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+body .skills .card .bar .progress6{
+    height: 100%;
+    width: 50%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+body .skills .card .bar .progress7{
+    height: 100%;
+    width: 30%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+body .skills .card .bar .progress8{
+    height: 100%;
+    width: 82%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+body .skills .card .bar .progress9{
+    height: 100%;
+    width: 20%;
+    background-color:#26234e;
+    border-radius: 30px;
+    color:#26234e;
+    box-shadow: 0px 0px 5px inset black;
+}
+
+body .skills .card .mainbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+body .skills .card .mainbar .p_percent1{
+    margin-left: 80%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body .skills .card .mainbar .p_percent2{
+    margin-left: 20%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body .skills .card .mainbar .p_percent3{
+    margin-left: 90%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body .skills .card .mainbar .p_percent4{
+    margin-left: 68%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+body .skills .card .mainbar .p_percent5{
+    margin-left: 57%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body .skills .card .mainbar .p_percent6{
+    margin-left: 0%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body .skills .card .mainbar .p_percent7{
+    margin-left: -40%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body .skills .card .mainbar .p_percent8{
+    margin-left: 65%;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body .skills .card .mainbar .p_percent9{
+    margin-left: -60%;
+    font-size: 1.3rem;
+    font-weight: 700;
 }
