@@ -28,7 +28,7 @@ hr{
 
 body header{
     
-    width: 100%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,6 +60,7 @@ body header nav ul
     align-items: center;
     justify-content: space-around;
     padding: 0px 20px;
+    width: auto;
 }
 
 body header nav ul li {
@@ -740,7 +741,7 @@ body .skills .skillsmain{
 }
 
 body .skills .heading{
-    width: 100%;
+    width: 95%;
     height: 20%;
     display: flex;
     justify-content: start;
@@ -781,7 +782,7 @@ body .skills .card{
     animation-fill-mode: both;
 }
 
-    @-webkit-keyframes flash {
+    @keyframes flash {
     0%, 50%, 100% {
     opacity: 1;
     }
@@ -947,4 +948,88 @@ body .skills .card .mainbar .p_percent9{
     margin-left: -60%;
     font-size: 1.3rem;
     font-weight: 700;
+}
+
+
+body .education{
+    width: auto;
+    height: auto;
+    margin: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body .education .educont
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    /* animation-timeline: view(); */
+    animation-fill-mode: both;
+}
+
+body .education .educard{
+    width: auto;
+    height: auto;
+    background-color: #00000018;
+    margin: 30px 8% ;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.476);
+    box-shadow: 0px 0px 30px inset rgba(0, 0, 0, 0.545);
+    padding: 10px 40px;
+    
+    display: flex;
+    align-items: center;
+}
+body .education .educard img{
+    height: 220px;
+    margin: 10px;
+}
+
+body .education .educard .desc{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+body .education .educard .desc h3{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+body .education .educard .desc p{
+    font-size: 2rem;
+}
+
+
+body .education .headingedu{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* margin-left: 18%; */
+    margin-bottom: 50px;
+}
+
+body .education .headingedu h1{
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #000000;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.781);
+}
+body .education .headingedu h1 span{
+    font-family: "Dancing Script", cursive;
+    color: #26234e;
 }
